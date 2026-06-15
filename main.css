@@ -1,0 +1,29 @@
+body>
+    <header>
+        <div class="container header-top">
+            <div>
+                <h1>Welcome to Hello!</h1>
+                <p id="welcome-message">Your friendly space for TTC (Tabletop Community).</p>
+            </div>
+            <button id="theme-toggle" class="button button-secondary" type="button">Toggle Theme</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h2>About TTC</h2>
+                <p>TTC is a community dedicated to tabletop gaming enthusiasts. Join us for discussions, game nights, and more!</p>
+            </section>
+            <section>
+                <h2>Join Our Community</h2>
+                <p>We invite you to connect with us on Discord for the latest updates and community events.</p>
+                <a id="discord-link" class="button" href="https://discord.gg/your-invite-link" target="_blank" rel="noopener noreferrer">Join our Discord Server</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hello. All rights reserved.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
