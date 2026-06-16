@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #ec4899;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --bg-light: #f9fafb;
+    --border-color: #e5e7eb;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+    --text-color: #f3f4f6;
+    --bg-color: #1f2937;
+    --bg-light: #111827;
+    --border-color: #374151;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 0;
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+.nav-links a.active {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 250px);
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+section ul li {
+    margin-bottom: 8px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Features Grid */
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    padding: 25px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* Games Grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.game-card {
+    padding: 25px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.game-card h3 {
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Events List */
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.event-card {
+    padding: 25px;
+    background-color: var(--bg-light);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.event-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.event-card h3 {
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.event-card strong {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.button-secondary {
+    background-color: var(--secondary-color);
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        flex: none;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .three-column {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-list {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+}
